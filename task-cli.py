@@ -45,7 +45,7 @@ def add_task(tasks, description):
     print(id)
     print(f'Task added sucessfully (ID: {new_task['id']})')
 
-def update(tasks, task_id, description):
+def update_task(tasks, task_id, description):
     task = find_task_by_id(tasks, task_id)
     if task:
         task['description'] = description
@@ -55,7 +55,7 @@ def update(tasks, task_id, description):
     else:
         print(f'Tarefa {task_id} não encontrada')
 
-def delete(task, task_id):
+def delete_task(tasks, task_id):
     original_len = len(tasks)
     task = [t for t in task if t['id']!= task_id]
     if len(tasks) < original_len:
